@@ -6,7 +6,7 @@ import AboutSection from './components/AboutSection'
 import AchievementsSection from './components/AchievementsSection'
 import Products from './components/Products'
 import Career from './components/Career'
-import Maps from './components/maps'
+import Maps from './components/Gmaps'
 
 
 
