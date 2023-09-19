@@ -7,24 +7,24 @@ import React from "react";
 const ProductsList = [
     {
         value: "RON 98",
-        item: "super",
+        item: "SUPER",
 
     },
     {
         value: "RON 95",
-        item: "premium",
+        item: "PREMIUM",
     },
     {
         value: "RON 93",
-        item: "regular",
+        item: "REGULAR",
     },
     {
         value: "10 PPM",
-        item: "euro diesel",
+        item: "EURO DIESEL",
     },
     {
         value: "10 PPM",
-        item: "diesel",
+        item: "DIESEL",
     },
 ];
 

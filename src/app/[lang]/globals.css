@@ -41,11 +41,11 @@ body {
 }
 
 .layer1{
-  background-image: url('../../public/images/wave.svg');
+  background-image: url('../../../public/images/wave.svg');
 }
 
 .layer2{
-  background-image: url('../../public/images/wave2.svg');
+  background-image: url('../../../public/images/wave2.svg');
 }
 
 
@@ -56,7 +56,7 @@ body {
 .homesection {
   width: 100%;
   min-height:800px;
-  background-image:linear-gradient(to right, transparent, rgba(17, 17, 17, 0.774)), url('../../public/images/homeimg.jpg');
+  background-image:linear-gradient(to right, transparent, rgba(17, 17, 17, 0.774)), url('../../../public/images/homeimg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -98,7 +98,7 @@ body {
   line-height: 120px;
   color: transparent;
   -webkit-text-stroke: 1px white;
-  background: url("../../public/images/back1.png");
+  background: url("../../../public/images/back1.png");
   -webkit-background-clip: text;
   background-position: 0 10;
   animation: back 40s linear infinite;
@@ -184,7 +184,7 @@ body {
     line-height: 70px;
     color: transparent;
     -webkit-text-stroke: 1px white;
-    background: url("../../public/images/back1.png");
+    background: url("../../../public/images/back1.png");
     -webkit-background-clip: text;
     background-position: 0 10;
     animation: back 20s linear infinite;

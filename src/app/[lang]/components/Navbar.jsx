@@ -28,8 +28,9 @@ const navLinks = [
   },
 ];
 
-const Navbar = () => {
+const Navbar = ({about, products, career, locations, contact}) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  
 
   return (
     <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
@@ -59,11 +60,25 @@ const Navbar = () => {
         </div>
         <div className="menu hidden md:block md:w-auto" id="navbar">
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
-            {navLinks.map((link, index) => (
-              <li key={index}>
-                <NavLink href={link.path} title={link.title} />
+            
+              <li>
+                <NavLink href="#about" title={about} />
               </li>
-            ))}
+              <li>
+                <NavLink href="#products" title={products} />
+              </li>
+              <li>
+                <NavLink href="#career" title={career} />
+              </li>
+              <li>
+                <NavLink href="#maps" title={locations} />
+              </li>
+              <li>
+                <NavLink href="#contact" title={contact} />
+              </li>
+             
+             
+           
           </ul>
         </div>
       </div>
@@ -73,3 +88,20 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+
+
+
+
+
+
+
+
+
+// {navLinks.map((link, index) => (
+//   <li key={index}>
+//     <NavLink href={link.path} title={link.title} />
+//   </li>
+// ))}
