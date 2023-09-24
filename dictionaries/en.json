@@ -16,7 +16,15 @@
     },
 
     "products":{
-       
-    }
+       "product":"PRODUCTS"
+    },
+
+
+    "contact":"CONTACT",
+    "office":"Office: university street N2",
+    "tell":"TELL",
+    "maill":"GMAIL"
+
+
     
 }

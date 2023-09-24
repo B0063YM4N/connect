@@ -28,13 +28,13 @@ const ProductsList = [
     },
 ];
 
-const Products = () => {
+const Products = ({title}) => {
     return (
         <section id="products">
             <div className="container mx-auto ">
                 <div className="py-8 px-4 xl:gap-16 sm:py-16 ">
-                    <h1 className='text-white mb-4 text-4xl place-self-center text-center sm:text-5xl lg:text-3xl font-extrabold'>PRODUCTS</h1>
-                    <div className="sm:border-[#33353F]  rounded-md py-8 px-16 flex flex-col sm:flex-row items-center justify-between">
+                    <h1 className='text-white mb-4 text-4xl place-self-center text-center sm:text-5xl lg:text-3xl font-extrabold'>{title}</h1>
+                    <div className=" md:border-[#33353F]  rounded-md py-8 px-16 flex flex-col sm:flex-row items-center justify-between">
                         {ProductsList.map((achievement, index) => {
                             return (
                                 <div
