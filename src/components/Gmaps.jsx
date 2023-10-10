@@ -321,7 +321,7 @@ const markers = [
 
 
 
-const Gmaps = () => {
+const Gmaps = ({title}) => {
     const { isLoaded } = useLoadScript({
         googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
     });
@@ -336,11 +336,11 @@ const Gmaps = () => {
     };
 
     return (
-        <section id="maps" className='mt-10'>
+        <section id="maps" className=' bg-[#282c2c]'>
             <Fragment>
                 
-                    <div className="map-container mx-auto">
-                        <h1 className="text-white mb-10 mt-0 text-4xl place-self-center text-center sm:text-5xl lg:text-3xl font-extrabold">FIND LOCATIONS</h1>
+                    <div className="map-container mx-auto bg-[#282c2c]">
+                        <h1 className="text-[#e7d833] mb-10 mt-0 text-4xl place-self-center text-center sm:text-5xl lg:text-3xl font-extrabold">{title}</h1>
                         <div style={{ height: "90vh", width: "100%", }}>
                             {isLoaded ? (
                                 <GoogleMap
