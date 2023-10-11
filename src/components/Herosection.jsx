@@ -15,20 +15,22 @@ const AnimatedNumbers = dynamic(
     { ssr: false }
 );
 
-const Herosection = () => {
+const Herosection = (props) => {
     return (
-        <section className='homesection  lg:px-16 ' >
+        <section className='homesection' >
             <div class="container homedesc mx-auto grid grid-rows-2 grid-cols-5 gap-10 sm:gap-5 z-20 text-black">
                 <div class="griditem lg:col-span-3 row-span-2 px-20 py-60 text-white bg-white rounded-lg h-95 sm:col-span-5">
-                    <h1 className="italic text-5xl font-semibold ">Most trusted quality fuel <br />In Georgia. </h1>
+                    <h1 className="herotitle italic text-6xl  font-semibold ">{props.title2}</h1>
+                    <br />
                     <br />
                     <Button href={"#maps"} title={"Locations"} />
                 </div>
 
-                <div class="lg:col-span-2 griditem2 bg-white rounded-lg px-10 py-20  sm:col-span-5 ">
+                <div class="lg:col-span-2 griditem2 bg-white rounded-lg px-10 py-10  sm:col-span-5">
                     <h1 className="text-4xl italic text-white" >Engineered for less carbon <br /> emissions.</h1>
-                    <br />
-                    <p className="text-[#ffffff] italic font-normal text-lg">Focused on laveraging the best technologies available to help you worry less and enjoy more.</p>
+                    
+                    <br /><br /><br /><br /><br />
+                    <p className="text-[#ffffff] italic font-normal text-lg ">Focused on laveraging the best technologies available to help you worry less and enjoy more.</p>
                 </div>
 
 
@@ -54,7 +56,7 @@ const Herosection = () => {
                         +
                     </h2>
                     <br />
-                    <p className=" text-white text-lg italic">stations all over the Georgia</p>
+                    <p className=" text-white text-lg italic">{props.subdesc1}</p>
 
                 </div>
 
@@ -62,7 +64,7 @@ const Herosection = () => {
 
 
 
-                <div class=" griditem3 row-span-1 lg:col-span-1 bg-[#959e9e] rounded-lg py-20 px-10 sm:col-span-2">
+                <div class=" griditem4 row-span-1 lg:col-span-1 bg-[#959e9e] rounded-lg py-20 px-10 sm:col-span-2">
                     <h2 className="text-white text-5xl font-bold flex flex-row">
 
                         <AnimatedNumbers
@@ -81,10 +83,10 @@ const Herosection = () => {
                         +
                     </h2>
                     <br />
-                    <p className=" text-white text-lg italic">Years at Your Service.</p>
+                    <p className=" text-white text-lg italic">{props.subdesc2}</p>
                 </div>
             </div>
-
+            
         </section >
     )
 }

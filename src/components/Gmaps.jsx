@@ -336,7 +336,8 @@ const Gmaps = ({title}) => {
     };
 
     return (
-        <section id="maps" className=' bg-[#282c2c]'>
+        <section id="maps" className=' bg-[#282c2c] relative'>
+            <div className='spacer layer1  h-40'></div>
             <Fragment>
                 
                     <div className="map-container mx-auto bg-[#282c2c]">

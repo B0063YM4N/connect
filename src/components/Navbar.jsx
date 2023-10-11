@@ -3,10 +3,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import MenuOverlay from "./MenuOverlay";
 import Image from "next/image"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -15,7 +12,10 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons'
 
 
 
-const Navbar = ({ about, products, career, locations, contact }) => {
+
+
+
+const Navbar = (props) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
 
@@ -24,11 +24,11 @@ const Navbar = ({ about, products, career, locations, contact }) => {
       <div className="1vh bg-[#282c2c] text-white align-middle  border-bottom-50 overflow-hidden max-height-1vh pt-2">
 
         <div className="container flex justify-between mx-auto px-5 text-center">
-          <div className="item1 flex justify-between px-2"><Image alt="call" src="/images/smartphone.png" width={20} height={10} /> <p className="text-sm text-center flex  px-2 justify-between italic text-[#cecece]">call  + 032 219 33 39</p></div>
-          <div className="item2 flex justify-between gap-2">
+          <div></div>
+          <div className="item2 flex place-content-end flex-end justify-between gap-2">
             <Link href={"/geo"}><Image src='/images/georgia.png' height={10} width={22} /></Link>
             <Link href={"/"}><Image src='/images/flag.png' height={10} width={22} /></Link>
-            <Link href={"/rus"}><Image src='/images/russia.png' height={10} width={22} /></Link>           
+            <Link href={"/rus"}><Image src='/images/russia.png' height={10} width={22} /></Link>
           </div>
         </div>
       </div>
@@ -36,7 +36,7 @@ const Navbar = ({ about, products, career, locations, contact }) => {
 
 
 
-      
+
       <div className="flex container lg:py-2 flex-wrap items-center justify-between mx-auto px-4 py-2">
 
 
@@ -70,19 +70,22 @@ const Navbar = ({ about, products, career, locations, contact }) => {
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0 gap-3">
 
             <li>
-              <NavLink href="#about" locale="rus" title={about} />
+              <NavLink href="about" locale="rus"  title={props.about} />
             </li>
             <li>
-              <NavLink href="#products" title={products} />
+              <NavLink href="products" title={props.products} />
             </li>
             <li>
-              <NavLink href="#career" title={career} />
+              <NavLink href="career" title={props.career} />
             </li>
             <li>
-              <NavLink href="#maps" title={locations} />
+              <NavLink href="maps" title={props.locations} />
             </li>
+              <li>
+                <NavLink href="corporative" title={props.corporative} />
+              </li>
             <li>
-              <NavLink href="#contact" title={contact} />
+              <NavLink href="contact" title={props.contact} />
             </li>
 
 
@@ -93,19 +96,22 @@ const Navbar = ({ about, products, career, locations, contact }) => {
       </div>
       {navbarOpen ? <ul className="flex flex-col py-4 items-center">
         <li>
-          <NavLink href="#about" locale="rus" title={about} />
+          <NavLink href="about" locale="rus" title={props.about} />
         </li>
         <li>
-          <NavLink href="#products" title={products} />
+          <NavLink href="products" title={props.products} />
         </li>
         <li>
-          <NavLink href="#career" title={career} />
+          <NavLink href="career" title={props.career} />
         </li>
         <li>
-          <NavLink href="#maps" title={locations} />
+          <NavLink href="maps" title={props.locations} />
         </li>
+          <li>
+            <NavLink href="corporative" title={props.corporative} />
+          </li>
         <li>
-          <NavLink href="#contact" title={contact} />
+          <NavLink href="contact" title={props.contact} />
         </li>
 
       </ul> : null}

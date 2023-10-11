@@ -32,6 +32,7 @@ const ProductsList = [
 const Products = ({title}) => {
     return (
         <section id="products" className="bg-[#282c2c]">
+            <div className='spacer layer1 h-40'></div>
             <div className="container mx-auto ">
                 <div className="py-8 px-4 xl:gap-16 sm:py-16 ">
                     <h1 className='text-[#e7d833] mb-4 text-4xl place-self-center text-center sm:text-5xl lg:text-3xl font-extrabold'>{title}</h1>
