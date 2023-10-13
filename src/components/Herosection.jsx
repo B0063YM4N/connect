@@ -19,11 +19,11 @@ const Herosection = (props) => {
     return (
         <section className='homesection' >
             <div class="container homedesc mx-auto grid grid-rows-2 grid-cols-5 gap-10 sm:gap-5 z-20 text-black">
-                <div class="griditem lg:col-span-3 row-span-2 px-20 py-60 text-white bg-white rounded-lg h-95 sm:col-span-5">
-                    <h1 className="herotitle italic text-6xl  font-semibold ">{props.title2}</h1>
+                <div class="griditem flex flex-col place-content-end lg:col-span-3 row-span-2 px-20 pb-20  text-white bg-white rounded-lg h-95 sm:col-span-5">
+                    <h1 className="herotitle    text-6xl  font-semibold  bottom-20 ">{props.title2}</h1>
                     <br />
                     <br />
-                    <Button href={"#maps"} title={"Locations"} />
+                    <Button href={"#maps"} title={"Locations"}  className=""/>
                 </div>
 
                 <div class="lg:col-span-2 griditem2 bg-white rounded-lg px-10 py-10  sm:col-span-5">

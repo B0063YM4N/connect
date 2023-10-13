@@ -25,7 +25,7 @@ export default async function Home({ params }) {
 
       <Navbar about={"о нас"} products={"продукты"} career={"карьера"} contact={"Контакт"} locations={"локации"} corporative={"корпорация"}  />
 
-      <Herosection title2={"твоя связь с дорогой"}/>
+      <Herosection title2={"твоя связь с дорогой"} subdesc1={"Станции по всей Грузии"} subdesc2={"Годы к вашим услугам"}/>
 
 
    

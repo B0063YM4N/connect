@@ -124,7 +124,7 @@ body {
     overflow: hidden;
   }
   .herotitle{
-    -webkit-text-stroke:0.1px  black;
+    /* -webkit-text-stroke:0.1px  black; */
   }
 
 
