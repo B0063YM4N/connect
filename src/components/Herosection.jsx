@@ -27,10 +27,10 @@ const Herosection = (props) => {
                 </div>
 
                 <div class="lg:col-span-2 griditem2 bg-white rounded-lg px-10 py-10  sm:col-span-5">
-                    <h1 className="text-4xl italic text-white" >Engineered for less carbon <br /> emissions.</h1>
+                    {/* <h1 className="text-4xl italic text-white" >Engineered for less carbon <br /> emissions.</h1>
                     
                     <br /><br /><br /><br /><br />
-                    <p className="text-[#ffffff] italic font-normal text-lg ">Focused on laveraging the best technologies available to help you worry less and enjoy more.</p>
+                    <p className="text-[#ffffff] italic font-normal text-lg ">Focused on laveraging the best technologies available to help you worry less and enjoy more.</p> */}
                 </div>
 
 
