@@ -431,3 +431,28 @@ body {
       padding: 0;
     }
   }
+
+
+
+
+
+  @media (max-width: 500px) {
+    .griditem2 {
+      width: 100%;
+      height:20vh;
+      display: block;
+    }
+
+    .griditem3 {
+      width: 50%;
+      border-radius: 0%;
+      display: block;
+    }
+    .griditem4 {
+      width: 50%;
+      display: block;
+      border-radius: 0%;
+    }
+
+
+  }
