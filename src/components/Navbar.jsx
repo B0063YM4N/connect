@@ -26,9 +26,9 @@ const Navbar = (props) => {
         <div className="container flex justify-between mx-auto px-5 text-center">
           <div></div>
           <div className="item2 flex place-content-end flex-end justify-between gap-2">
-            <Link href={"/geo"}><Image src='/images/georgia.png' height={10} width={22} /></Link>
-            <Link href={"/"}><Image src='/images/flag.png' height={10} width={22} /></Link>
-            <Link href={"/rus"}><Image src='/images/russia.png' height={10} width={22} /></Link>
+            <Link href={"/geo"} ><Image alt="geo" src='/images/georgia.png' height={10} width={22} /></Link>
+            <Link href={"/"} ><Image alt="en" src='/images/flag.png' height={10} width={22} /></Link>
+            <Link href={"/rus"}><Image  alt="rus" src='/images/russia.png' height={10} width={22} /></Link>
           </div>
         </div>
       </div>
@@ -46,7 +46,7 @@ const Navbar = (props) => {
           locale="rus"
           className="text-2xl md:text-5xl text-white font-semibold"
         >
-          <Image src='/images/logoo.png' height={70} width={70} scal />
+          <Image alt="logo" src='/images/logoo.png' height={70} width={70} scal />
         </Link>
 
         <div className="mobile-menu block md:hidden">
