@@ -12,7 +12,11 @@ const Career = ({ title, desc }) => {
     return (
 
         <section className="text-black bg-white" id="career" >
-            <div className='spacer layer2 h-40 '></div>
+            {/* <div className='spacer layer2 h-40 '></div> */}
+            <br />
+            <br />
+            <br />
+            <br />
             <PageWrapper>
 
 

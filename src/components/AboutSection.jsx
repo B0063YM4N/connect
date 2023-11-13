@@ -25,7 +25,8 @@ const AboutSection = ({ desc, subdesc, title, subtitle }) => {
                         <Image  alt="aboutimage" src="/images/aboutimg.jpg" width={500} height={500} className="rounded" />
                         <div className="mt-4  text-left md:mt-0  flex flex-col h-full">
                         
-                            <h2 className="lg:text-3xl  sm:text-lg font-bold text-[#e7d833] mb-4  sm:text-left"> {title}</h2>
+                            <h2 className="text-4xl font-bold text-[#e7d833] mb-4 place-self-center text-center sm:text-left"> {title}</h2>
+                              <br />
                             <p className="text-base text-black lg:text-lg    sm:py-0">
                                 {desc}
                             </p>
