@@ -24,6 +24,7 @@ const Products = ({title}) => {
     //     fetchData();
     //   }, []);
     // const { data, mutate, error, isLoading } = useSWR(`https://connect-database.vercel.app/api/data`, fetcher);
+    
       const fetcher = (...args) => fetch(...args).then((res) => res.json());
       const { data, mutate, error, isLoading } = useSWR(`/api/data`, fetcher);
 
