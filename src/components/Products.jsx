@@ -1,12 +1,31 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 
 
 
 
 const Products = ({title, data}) => {
+    // const [data, setData] = useState({});
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //       try {
+    //         const res = await fetch("https://connect-database.vercel.app/api/data");
+    //         const newData = await res.json();
+    //         console.log(newData);
+    //         setData(newData)
+    //       } catch (error) {
+    //         console.error("Error fetching data:", error);
+    //       }
+    //     };
+      
+    //     fetchData();
+    //   }, []);
+
+    //   console.log(data);
+
     return (
         <section id="products" className="bg-[#282c2c]">
             
