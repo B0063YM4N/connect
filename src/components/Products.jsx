@@ -17,7 +17,7 @@ const Products = ({title, data}) => {
                     {data.data.map(achievement => {
                             return (
                                 <div
-                                    key={achievement._id}
+                                    key={achievement.id}
                                     className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0 border-[#e5e6e3] sm:border rounded-xl py-8 px-16"
                                 >
                                     <Image alt="call" src="/images/gas-pump.png" width={30} height={30} />
