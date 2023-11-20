@@ -1,6 +1,6 @@
 "use client"
 
-export default function page() {
+export default function AdminPage() {
 
     const habdleAddData = async (e) => {
         e.preventDefault();
@@ -28,7 +28,7 @@ export default function page() {
         }
     
       }
-      
+
   return (
     <form onSubmit={habdleAddData}>
       <input
