@@ -4,11 +4,11 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 
+import useSWR from "swr";
 
 
-
-const Products = ({title, data}) => {
-    // const [data, setData] = useState({});
+const Products = ({title}) => {
+    // const [dataa, setData] = useState([]);
     // useEffect(() => {
     //     const fetchData = async () => {
     //       try {
@@ -23,17 +23,20 @@ const Products = ({title, data}) => {
       
     //     fetchData();
     //   }, []);
+    // const { data, mutate, error, isLoading } = useSWR(`https://connect-database.vercel.app/api/data`, fetcher);
+    
+      const fetcher = (...args) => fetch(...args).then((res) => res.json());
+      const { data, mutate, error, isLoading } = useSWR(`/api/data`, fetcher);
 
-    //   console.log(data);
+      console.log(data);
 
     return (
         <section id="products" className="bg-[#282c2c]">
-            
             <div className="container mx-auto ">
                 <div className="py-8 px-4 xl:gap-16 sm:py-16 ">
                     <h1 className='text-[#e7d833] mb-4 text-4xl place-self-center text-center sm:text-5xl lg:text-3xl font-extrabold'>{title}</h1>
                     <div className=" md:border-[#33353F]  rounded-md py-8 px-16 flex flex-col sm:flex-row items-center justify-between">
-                    {data && data.data.map(achievement => {
+                    {!isLoading && data.data?.map(achievement => {
                             return (
                                 <div
                                     key={achievement.id}
