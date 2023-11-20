@@ -4,42 +4,28 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 
-
+import useSWR from "swr";
 
 
 const Products = ({title}) => {
-    const [data, setData] = useState([]);
-    useEffect(() => {
-        const fetchData = async () => {
-          try {
-            const res = await fetch("https://connect-database.vercel.app/api/data");
-            const newData = await res.json();
-            console.log(newData);
-            setData(newData)
-          } catch (error) {
-            console.error("Error fetching data:", error);
-          }
-        };
+    // const [dataa, setData] = useState([]);
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //       try {
+    //         const res = await fetch("https://connect-database.vercel.app/api/data");
+    //         const newData = await res.json();
+    //         console.log(newData);
+    //         setData(newData)
+    //       } catch (error) {
+    //         console.error("Error fetching data:", error);
+    //       }
+    //     };
       
-        fetchData();
-      }, [data]);
-
-    //   console.log(data);
-    // const fetchData = async () => {
-    //     try {
-    //       const res = await fetch("https://connect-database.vercel.app/api/data")
-    //       const data = await res.json()
-    //       setData(data)
-    //       console.log(data);
-          
-    //     } catch (error) {
-    //       console.error("Error fetching data:", error);
-    //     }
-    //   };
-      
-    //   useEffect(() => {
     //     fetchData();
     //   }, []);
+
+      const fetcher = (...args) => fetch(...args).then((res) => res.json());
+      const { data, mutate, error, isLoading } = useSWR(`https://connect-database.vercel.app/api/data`, fetcher);
 
       console.log(data);
 
@@ -49,8 +35,7 @@ const Products = ({title}) => {
                 <div className="py-8 px-4 xl:gap-16 sm:py-16 ">
                     <h1 className='text-[#e7d833] mb-4 text-4xl place-self-center text-center sm:text-5xl lg:text-3xl font-extrabold'>{title}</h1>
                     <div className=" md:border-[#33353F]  rounded-md py-8 px-16 flex flex-col sm:flex-row items-center justify-between">
-                    {data && data.data?.map(achievement => {
-                      console.log(data);
+                    {!isLoading && data.data?.map(achievement => {
                             return (
                                 <div
                                     key={achievement.id}
