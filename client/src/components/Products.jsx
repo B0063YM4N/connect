@@ -22,7 +22,7 @@ const Products = ({title}) => {
         };
       
         fetchData();
-      }, []);
+      }, [data]);
 
     //   console.log(data);
     // const fetchData = async () => {
