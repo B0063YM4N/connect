@@ -4,9 +4,7 @@ const nextConfig = {
     images:{
         unoptimized:true,
     },
-    env: {
-        ADMIN_EMAIL: process.env.ADMIN_EMAIL,
-      },
+   
 
     //   async headers() {
     //     return [
