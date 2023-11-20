@@ -13,20 +13,11 @@ import Editproducts from '@/components/Editproducts'
 
 
 
-
-
-
-
-
-
-
-
-
 export default async function Home({ params }) {
 
         const res = await fetch("https://connect-database.vercel.app/api/data")
         const data = await res.json()
-        console.log(data);
+        console.log(data && data);
 
   return (
     <main className=" flex min-h-screen flex-col bg-[#121212] scroll-smooth " >
